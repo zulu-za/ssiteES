@@ -1,0 +1,20 @@
+.btn-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 30px;
+  background-color: #ffa800;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: 'Courier New', monospace;
+}
+
+.btn-link:hover {
+  background-color: #ff8200;
+}
+#dla{
+  width: 100%
+  
+}

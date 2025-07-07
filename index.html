@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .login-box {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      padding: 30px;
+      background: #111;
+      border: 1px solid #444;
+      border-radius: 5px;
+    }
+
+    .login-box input {
+      background: #000;
+      color: #0f0;
+      border: 1px solid #0f0;
+      padding: 10px;
+      margin: 10px 0;
+      font-family: 'Courier New', monospace;
+    }
+
+    .login-box button {
+      padding: 10px;
+      background: #0f0;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+    }
+
+    .login-box button:hover {
+      background: #0c0;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <input id="username" type="text" placeholder="Username" required />
+    <input id="password" type="password" placeholder="Password" required />
+    <button onclick="checkLogin()">Login</button>
+  </div>
+
+  <div id="message"></div>
+
+  <script>
+    function checkLogin() {
+      const pass = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      if (pass === "003") {
+        message.innerHTML = "Success";
+        message.style.color = "#0f0";
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 1000); // wait 1 second before redirect
+      } else {
+        message.innerHTML = "Error";
+        message.style.color = "#f00";
+      }
+    }
+  </script>
+
+</body>
+</html>
